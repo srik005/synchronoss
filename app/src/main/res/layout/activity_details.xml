@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    cardView:cardCornerRadius="8dp"
+    cardView:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cardView:layout_constraintBottom_toBottomOf="@+id/tvWeatherLabel"
+        cardView:layout_constraintTop_toBottomOf="@+id/tvWeatherLabel">
+
+        <TextView
+            android:id="@+id/tvWeatherLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Weather :"
+            android:textSize="20sp"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvWeather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="hi"
+            android:textSize="20sp"
+            cardView:layout_constraintBottom_toTopOf="@+id/tvTempLabel"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintRight_toRightOf="@id/tvWeatherLabel"
+            cardView:layout_constraintStart_toEndOf="@+id/tvWeatherLabel"
+            cardView:layout_constraintTop_toTopOf="parent"
+            cardView:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvTempLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Temperature :"
+            android:textSize="20sp"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toBottomOf="@id/tvWeatherLabel" />
+
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="hi"
+            android:textSize="20sp"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintRight_toRightOf="@id/tvTempLabel"
+            cardView:layout_constraintStart_toEndOf="@+id/tvTempLabel"
+            cardView:layout_constraintTop_toBottomOf="@+id/tvWeather" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
